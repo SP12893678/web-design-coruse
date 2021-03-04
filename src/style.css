@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* h1{
+    color: darkorange;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
+.Font-Exo {
+font-family: 'Exo 2', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&display=swap');
+.Font-Sans {
+    font-family: 'Noto Sans TC', sans-serif;
+}
