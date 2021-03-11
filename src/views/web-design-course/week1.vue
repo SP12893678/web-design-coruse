@@ -1,17 +1,13 @@
 <template>
-  <v-coruse-card :code="code">
+  <v-coruse-card
+    :code="code"
+    :date="date"
+    :title="title"
+    :week="week"
+  >
     <template slot="card-left">
       <div>
-        <h1 class=" text-5xl font-bold Exo">
-          Introduction HTML
-        </h1>
-        <div class="pb-2 border-b-2">
-          <span class="text-black opacity-50 text-xs pr-2">
-            Posted on February 25, 2021
-          </span>
-          <span class="text-xs px-2 py-1 bg-black  opacity-50 text-gray-200  rounded-full">Week1</span>
-        </div>
-        <div class="pt-3 pb-2 Font-Sans font-light">
+        <div class="pt-3 pb-4 Font-Sans font-light">
           <p>
             喵喵喵喵喵⋯喵喵喵喵喵⋯喵喵喵喵喵喵喵喵喵喵，喵喵喵喵喵喵喵喵⋯喵喵喵喵喵喵喵喵喵，喵喵喵喵喵喵喵喵。喵，喵喵喵喵喵喵喵喵喵喵喵，喵喵喵，喵喵喵喵喵喵喵。喵喵喵喵喵喵喵喵，喵喵喵喵喵喵喵喵喵喵喵喵喵，喵喵喵喵喵喵喵喵喵喵喵喵喵喵：喵喵喵喵喵喵喵喵，喵喵喵喵喵喵喵喵喵，喵喵喵喵。
 
@@ -42,23 +38,14 @@ export default {
     },
     data () {
         return {
-            code: `<div>
-  <h1 class="text-red-500">
-    2021/2/25 ACS106103彭俊閎 註
-  </h1>
-  <a href="https://cs.ntcu.edu.tw/">台中教育大學資訊工程學系</a>
-  <p>敘述</p>
-  <img
-    src="../../assets/images/name.png"
-    alt="my picture"
-  >
-  <v-high-light :code="code" />
-</div>`
+            title: 'Introduction HTML',
+            date: 'February 25, 2021',
+            week: '1',
+            code: ''
         }
     }
 }
 </script>
 
 <style lang="scss">
-
 </style>

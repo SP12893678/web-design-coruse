@@ -1,18 +1,34 @@
 <template>
-  <div class="grid grid-cols-2 course-container">
-    <div class="course-card course-card-left">
-      <perfect-scrollbar>
-        <slot name="card-left" />
-      </perfect-scrollbar>
+  <div>
+    <div class="grid grid-cols-2 course-container">
+      <div class="course-card course-card-left">
+        <perfect-scrollbar>
+          <div>
+            <h1 class=" text-4xl font-bold Exo">
+              {{ title }}
+            </h1>
+            <div class="pb-2 border-b border-gray-500 border-dotted">
+              <span class="text-black opacity-50 text-xs pr-2">
+                Posted on {{ date }}
+              </span>
+              <span class="text-xs px-2 py-1 bg-black  opacity-50 text-gray-200  rounded-full">Week{{ week }}</span>
+            </div>
+
+            <slot name="card-left" />
+          </div>
+        </perfect-scrollbar>
+      </div>
+      <div class="course-card course-card-right">
+        <perfect-scrollbar>
+          <v-high-light
+            :code="code"
+            style="overflow-y: overlay;"
+          />
+        </perfect-scrollbar>
+      </div>
     </div>
-    <div class="course-card course-card-right">
-      <perfect-scrollbar>
-        <v-high-light
-          :code="code"
-          style="overflow-y: overlay;"
-        />
-      </perfect-scrollbar>
-    </div>
+
+    <!-- <div>Testing</div> -->
   </div>
 </template>
 
@@ -27,6 +43,18 @@ export default {
         code: {
             type: String,
             default: ''
+        },
+        title: {
+            type: String,
+            default: 'Course Title'
+        },
+        date: {
+            type: String,
+            default: 'February 25, 2021'
+        },
+        week: {
+            type: Number,
+            default: 0
         }
     },
     data () {
@@ -39,7 +67,7 @@ export default {
 
 <style lang="scss">
 .course-container {
-  height: calc(100vh - 80px);
+
 }
 .course-card {
   padding-top: 16px;
@@ -52,7 +80,7 @@ export default {
   padding-right: 16px;
 }
 .ps {
-  height: 100%;
+  height: 80vh;
   border-radius: 16px;
   background-image: linear-gradient(90deg,rgba(60,10,30,.04) 3%,transparent 0),linear-gradient(1turn,rgba(60,10,30,.04) 3%,transparent 0);
   background-size: 20px 20px;

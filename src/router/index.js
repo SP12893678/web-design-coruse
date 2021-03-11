@@ -7,6 +7,7 @@ import Error from '../views/Error.vue'
 
 import week1 from '../views/web-design-course/week1.vue'
 import week2 from '../views/web-design-course/week2.vue'
+import week3 from '../views/web-design-course/week3.vue'
 
 Vue.use(Router)
 
@@ -18,7 +19,8 @@ const router = new Router({
             component: CourseViewer,
             children: [
                 { path: 'week1', component: week1 },
-                { path: 'week2', component: week2 }
+                { path: 'week2', component: week2 },
+                { path: 'week3', component: week3 }
             ]
         },
         { path: '/404', name: 'error', component: Error },

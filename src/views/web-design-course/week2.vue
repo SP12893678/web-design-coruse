@@ -1,13 +1,14 @@
 <template>
-  <v-coruse-card :code="code">
+  <v-coruse-card
+    :code="code"
+    :date="date"
+    :title="title"
+    :week="week"
+  >
     <template slot="card-left">
-      <router-link to="/course/week1">
-        <a>Go To Week1</a>
-      </router-link>
-      <h1 style="color:red;">
-        I am Header Title
-      </h1>
-      <hr>
+      <div>
+        121231
+      </div>
     </template>
   </v-coruse-card>
 </template>
@@ -21,12 +22,14 @@ export default {
     },
     data () {
         return {
-            code: '<a>Go To Week1</a>'
+            title: 'HTML Basic, Elements, Attributes, Headings, Paragraphs, Styles',
+            date: 'March 4, 2021',
+            week: '2',
+            code: ''
         }
     }
 }
 </script>
 
-<style>
-
+<style lang="scss">
 </style>
