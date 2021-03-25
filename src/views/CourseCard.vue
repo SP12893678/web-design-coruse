@@ -15,6 +15,28 @@
             </div>
 
             <slot name="card-left" />
+            <div class="mt-4 card-footer flex justify-between">
+              <router-link
+                v-if="week>1"
+                :to="`/course/week${subNum(week,1)}`"
+                class=" text-xs text-blue-600 border-b border-blue-600"
+              >
+                〈〈 前往上一篇文章
+              </router-link>
+              <router-link
+                v-if="week<=1"
+                :to="`/`"
+                class=" text-xs text-blue-600 border-b border-blue-600"
+              >
+                回目錄
+              </router-link>
+              <router-link
+                :to="`/course/week${addNum(week,1)}`"
+                class=" text-xs text-blue-600 border-b border-blue-600"
+              >
+                前往下一篇文章 〉〉
+              </router-link>
+            </div>
           </div>
         </perfect-scrollbar>
       </div>
@@ -60,6 +82,16 @@ export default {
     data () {
         return {
 
+        }
+    },
+    methods: {
+        addNum (week, value) {
+            const res = Number(week) + value
+            return String(res)
+        },
+        subNum (week, value) {
+            const res = Number(week) - value
+            return String(res)
         }
     }
 }

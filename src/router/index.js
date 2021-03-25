@@ -8,6 +8,9 @@ import Error from '../views/Error.vue'
 import week1 from '../views/web-design-course/week1.vue'
 import week2 from '../views/web-design-course/week2.vue'
 import week3 from '../views/web-design-course/week3.vue'
+import week4 from '../views/web-design-course/week4.vue'
+import week4sub2 from '../views/web-design-course/week4-2.vue'
+import week5 from '../views/web-design-course/week5.vue'
 
 Vue.use(Router)
 
@@ -20,7 +23,11 @@ const router = new Router({
             children: [
                 { path: 'week1', component: week1 },
                 { path: 'week2', component: week2 },
-                { path: 'week3', component: week3 }
+                { path: 'week3', component: week3 },
+                { path: 'week4', component: week4 },
+                { path: 'week4-2', component: week4sub2 },
+                { path: 'week5', component: week5 }
+
             ]
         },
         { path: '/404', name: 'error', component: Error },

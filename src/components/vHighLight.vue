@@ -16,6 +16,7 @@ import 'vue-prism-editor/dist/prismeditor.min.css' // import the styles somewher
 import { highlight, languages } from 'prismjs/components/prism-core'
 import 'prismjs/components/prism-clike'
 import 'prismjs/components/prism-javascript'
+import 'prismjs/components/prism-markup'
 import 'prismjs/components/prism-css'
 import 'prismjs/themes/prism-tomorrow.css' // import syntax highlighting styles
 
@@ -32,7 +33,7 @@ export default {
     // data: () => ({ code: 'console.log("Hello World")' }),
     methods: {
         highlighter (code) {
-            return highlight(code, languages.js) // returns html
+            return highlight(code, languages.css) // returns html
         }
     }
 }

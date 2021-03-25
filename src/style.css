@@ -15,3 +15,12 @@ font-family: 'Exo 2', sans-serif;
 .Font-Sans {
     font-family: 'Noto Sans TC', sans-serif;
 }
+
+@font-face {
+    font-family: 'tetai-2';
+    src: url('./assets/font/tetai-2.ttf');
+}
+
+.tetai-2 {
+    font-family: 'tetai-2', sans-serif;
+}

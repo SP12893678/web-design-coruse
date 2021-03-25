@@ -18,31 +18,42 @@
         </span>
       </div>
       <div>
-        <h1 class="text-2xl my-2 font-bold">
+        <h1 class="text-2xl mt-4 my-2 font-bold">
           縮寫
         </h1>
-        The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
-        <h1 class="text-2xl my-2 font-bold">
+        <abbr title="National Taichung University of Education">NTCU</abbr> 是國立臺中教育大學的簡稱.
+        <h1 class="text-2xl mt-4 my-2 font-bold">
           地址
         </h1>
         <address class=" text-sm ">
-          Written by John Doe.<br>
-          Visit us at:<br>
-          Example.com<br>
-          Box 564, Disneyland<br>
-          USA
+          403台中市西區民生路140號
         </address>
-        <h1 class="text-2xl my-2 font-bold">
+        <h1 class="text-2xl mt-4 my-2 font-bold">
           引用
         </h1>
 
         <blockquote cite="http://www.worldwildlife.org/who/index.html">
-          For 50 years, WWF has been protecting the future of nature.
-          The world's leading conservation organization,
-          WWF works in 100 countries and is supported by
-          1.2 million members in the United States and
-          close to 5 million globally.
+          <span>
+            一念成滄海，一念化桑田。一念斬千魔，一念誅萬仙。唯我念……永恆
+            <br><span class="text-xs  flex justify-end"> ——耳根 《一念永恆》</span>
+          </span>
         </blockquote>
+
+        <h1 class="text-2xl mt-4 my-2 font-bold">
+          倒著念
+        </h1>
+        <textarea
+          id=""
+          v-model="msg"
+          placeholder="輸入想說的話"
+          name=""
+          rows="1"
+          class="w-full pl-4 border border-black  rounded-full"
+        />
+        <bdo
+          class=" flex flex-grow w-full pr-4 border border-black  rounded-full"
+          dir="rtl"
+        >{{ msg?msg:'輸入想說的話' }}</bdo>
       </div>
     </template>
   </v-coruse-card>
@@ -50,6 +61,28 @@
 
 <script>
 import vCoruseCard from '../CourseCard.vue'
+
+const mycode = `<b> <!-- 粗體文字 -->
+<strong> <!-- 重要文字 -->
+<i> <!-- 斜體文字 -->
+<em> <!-- 強調文字 -->
+<mark> <!-- 標記文字 -->
+<small> <!-- 較小的文字 -->
+<del> <!-- 刪除的文字 -->
+<ins> <!-- 插入文字 -->
+<sub> <!-- 下標文字 -->
+<sup> <!-- 上標文字 -->
+<abbr> <!-- 縮寫文字 -->
+<address> <!-- 聯絡地址文字 -->
+<bdo> <!-- 雙向替代文字 (改變文字方向)-->
+<cite> <!-- 引用文字 (斜體)-->
+<blockquote> <!-- 區塊引用文字 -->
+<q> <!-- 行內引用文字 (雙引號)-->
+
+<h1 style="background-color:Blue;">Hello World</h1> 
+<!-- style屬性添加元素樣式 -->
+<!-- background-color css可使用預定義的顏色名稱 -->
+`
 
 export default {
     components: {
@@ -60,7 +93,8 @@ export default {
             title: 'HTML Text Formatting, Quotations, Comments, Colors',
             date: 'March 11, 2021',
             week: '3',
-            code: 'console.log(\'HTML Text Formatting, Quotations, Comments, Colors\')'
+            code: mycode,
+            msg: ''
         }
     }
 }
@@ -70,7 +104,7 @@ export default {
 .root{
     position: absolute;
     font-size: 28px;
-    top: -11px;
+    top: -9px;
 }
 .roof{
     border-top: 2px solid rgb(0, 0, 0);

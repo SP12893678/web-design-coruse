@@ -41,13 +41,25 @@ module.exports = {
                 loader: 'vue-loader'
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|jpe?g|gif|jfif)$/i,
                 use: [
                     {
                         loader: 'url-loader',
                         options: {
                             name: 'assets/images/[hash:7].[ext]',
                             esModule: false
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'assets/font/[hash:7].[ext]',
+                            limit: 100000
                         }
                     }
                 ]
