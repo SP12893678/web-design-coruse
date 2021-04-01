@@ -12,6 +12,10 @@ import week4 from '../views/web-design-course/week4.vue'
 import week4sub2 from '../views/web-design-course/week4-2.vue'
 import week5 from '../views/web-design-course/week5.vue'
 
+import week5book1 from '../views/book/book1.vue'
+import week5book2 from '../views/book/book2.vue'
+import week5book3 from '../views/book/book3.vue'
+
 Vue.use(Router)
 
 const router = new Router({
@@ -26,8 +30,10 @@ const router = new Router({
                 { path: 'week3', component: week3 },
                 { path: 'week4', component: week4 },
                 { path: 'week4-2', component: week4sub2 },
-                { path: 'week5', component: week5 }
-
+                { path: 'week5', component: week5 },
+                { path: 'week5-book1', component: week5book1 },
+                { path: 'week5-book2', component: week5book2 },
+                { path: 'week5-book3', component: week5book3 }
             ]
         },
         { path: '/404', name: 'error', component: Error },
