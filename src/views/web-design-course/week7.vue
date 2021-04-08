@@ -12,287 +12,34 @@
       <div
         id="img"
       />
+
       <table
         class="mt-4 text-xs"
       >
-        <caption class=" font-bold ">
-          109-2修課表
+        <caption class="text-base font-bold ">
+          表. 109-2修課表
         </caption>
-        <tr>
+        <tr
+          v-for="(row,index) in corses_table"
+          :key="index"
+        >
           <td
-            colspan="3"
-            rowspan="2"
-            class="has_course bg-gray-200 text-center"
+            v-for="(item,i) in row"
+            :key="i"
+            :colspan="item.col"
+            :rowspan="item.row"
+            :class="item.class"
+            :width="item.width"
           >
-            節次/時間
+            <template v-if="item.name">
+              {{ item.name }}<br>{{ item.teacher }}<br>{{ item.room }}
+            </template>
+            <template v-else>
+              {{ item.text }}
+            </template>
           </td>
-          <td
-            colspan="5"
-            class="text-center has_course bg-gray-200"
-          >
-            工作日
-          </td>
-          <td
-            colspan="2"
-            class="text-center has_course bg-gray-200"
-          >
-            周末
-          </td>
-        </tr>
-        <tr>
-          <td width="80px">
-            一
-          </td>
-          <td width="80px">
-            二
-          </td>
-          <td width="80px">
-            三
-          </td>
-          <td width="80px">
-            四
-          </td>
-          <td width="80px">
-            五
-          </td>
-          <td width="80px">
-            六
-          </td>
-          <td width="80px">
-            日
-          </td>
-        </tr>
-        <tr>
-          <td
-            rowspan="4"
-            width="30px"
-            class="has_course bg-gray-300"
-          >
-            上午
-          </td>
-          <td width="20px">
-            1
-          </td>
-          <td width="80px">
-            08:10-09:00
-          </td>
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>09:10-10:00</td>
-          <td />
-          <td />
-          <td
-            class="text-center has_course bg-orange-400"
-            rowspan="3"
-            width="60px"
-          >
-            軟體品質保證與測試<br>
-            徐國勛<br>
-            K204b<br>
-          </td>
-          <td
-            class="text-center has_course bg-yellow-400"
-            rowspan="3"
-          >
-            網頁程式設計<br>
-            林嬿雯<br>
-            K208a<br>
-          </td>
-          <td
-            class="text-center has_course bg-red-400"
-            rowspan="3"
-          >
-            電腦網路應用<br>
-            方覺非<br>
-            K303a<br>
-          </td>
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>10:20-11:10</td>
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>11:20-12:10</td>
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td
-            rowspan="1"
-            class="has_course bg-gray-300"
-          >
-            中午
-          </td>
-          <td>5</td>
-          <td>12:20-13:10</td>
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td
-            rowspan="4"
-            class="has_course bg-gray-300"
-          >
-            下午
-          </td>
-          <td>6</td>
-          <td>13:30-14:20</td>
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>14:30-15:20</td>
-          <td />
-          <td />
-          <td />
-          <td
-            class="text-center has_course bg-green-500"
-            rowspan="3"
-          >
-            網路程式設計<br>
-            李宗翰<br>
-            K204a<br>
-          </td>
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>15:40-16:30</td>
-          <td />
-          <td
-            class="text-center has_course bg-blue-400"
-            rowspan="2"
-          >
-            班會<br>
-            孔崇旭、李宗翰<br>
-            K204a<br>
-          </td>
-          <td />
-
-          <td
-            class="text-center has_course bg-purple-400"
-            rowspan="3"
-          >
-            無人機證照與創業<br>
-            何信昭<br>
-            K410<br>
-          </td>
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>16:40-17:30</td>
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td
-            rowspan="4"
-            class="has_course bg-gray-300"
-          >
-            晚上
-          </td>
-          <td>10</td>
-          <td>12:20-13:10</td>
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>16:40-17:30</td>
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>16:40-17:30</td>
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
-        </tr>
-        <tr>
-          <td>13</td>
-          <td>16:40-17:30</td>
-          <td />
-          <td />
-          <td />
-          <td />
-          <td />
         </tr>
       </table>
-
-      <!-- <table>
-        <tr>
-          <td class=" text-xs">
-            細項/時段
-          </td>
-          <td>早餐</td>
-          <td>午餐</td>
-          <td>晚餐</td>
-        </tr>
-        <tr>
-          <td>食物</td>
-          <td>三明治</td>
-          <td>義大利麵</td>
-          <td>便當</td>
-        </tr>
-        <tr>
-          <td>價錢</td>
-          <td>$30</td>
-          <td>$100</td>
-          <td>$75</td>
-        </tr>
-      </table> -->
     </template>
   </v-coruse-card>
 </template>
@@ -313,14 +60,386 @@ export default {
             date: 'February 25, 2021',
             week: '7',
             code: mycode,
-            corses: [
-                {
-                    day: {
-                        row: 4,
-                        col: 1,
-                        text: '上午'
+            corses_table: [
+                [
+                    {
+                        col: 3,
+                        row: 2,
+                        text: '節次/時間',
+                        class: 'has_course bg-gray-200 text-center font-semibold'
+                    },
+                    {
+                        col: 5,
+                        row: 1,
+                        text: '工作日',
+                        class: 'has_course bg-gray-200 text-center font-semibold'
+                    },
+                    {
+                        col: 2,
+                        row: 1,
+                        text: '周末',
+                        class: 'has_course bg-gray-200 text-center font-semibold'
                     }
-                }
+                ],
+                [
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '一',
+                        class: 'text-center',
+                        width: '80px'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '二',
+                        class: 'text-center',
+                        width: '80px'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '三',
+                        class: 'text-center',
+                        width: '80px'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '四',
+                        class: 'text-center',
+                        width: '80px'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '五',
+                        class: 'text-center',
+                        width: '80px'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '六',
+                        class: 'text-center',
+                        width: '80px'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '日',
+                        class: 'text-center',
+                        width: '80px'
+                    }
+                ],
+                [
+                    {
+                        col: 1,
+                        row: 4,
+                        text: '上午',
+                        class: 'has_course bg-gray-200 text-center font-semibold',
+                        width: '30px'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '1',
+                        class: 'text-center',
+                        width: '20px'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '08:10-09:00',
+                        class: '',
+                        width: '80px'
+                    }
+                ],
+                [
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '2',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '09:10-10:00',
+                        class: ''
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 3,
+                        text: '',
+                        name: '軟體品質保證與測試',
+                        teacher: '徐國勛',
+                        room: 'K204b',
+                        class: 'has_course bg-orange-400 text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 3,
+                        text: '網頁程式設計林嬿雯K208a',
+                        name: '網頁程式設計',
+                        teacher: '林嬿雯',
+                        room: 'K208a',
+                        class: 'has_course bg-yellow-400 text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 3,
+                        text: '電腦網路應用方覺非K303a',
+                        name: '電腦網路應用',
+                        teacher: '方覺非',
+                        room: 'K303a',
+                        class: 'has_course bg-red-400 text-center'
+                    }
+                ],
+                [
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '3',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '10:20-11:10',
+                        class: ''
+                    }
+                ],
+                [
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '4',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '11:20-12:10',
+                        class: ''
+                    }
+                ],
+                [
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '中午',
+                        class: 'has_course bg-gray-200 text-center font-semibold'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '5',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '12:20-13:10',
+                        class: ''
+                    }
+                ],
+                [
+                    {
+                        col: 1,
+                        row: 4,
+                        text: '下午',
+                        class: 'has_course bg-gray-200 text-center font-semibold'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '6',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '13:30-14:20',
+                        class: ''
+                    }
+                ],
+                [
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '7',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '14:30-15:20',
+                        class: ''
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 3,
+                        text: '網路程式設計李宗翰K204a',
+                        name: '網路程式設計',
+                        teacher: '李宗翰',
+                        room: 'K204a',
+                        class: 'has_course bg-green-500 text-center'
+                    }
+                ],
+                [
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '8',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '15:40-16:30',
+                        class: ''
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 2,
+                        text: '班會孔崇旭、李宗翰K204a',
+                        name: '班會',
+                        teacher: '孔崇旭、李宗翰',
+                        room: 'K204a',
+                        class: 'has_course bg-blue-400 text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 3,
+                        text: '無人機證照與創業何信昭K410',
+                        name: '無人機證照與創業',
+                        teacher: '何信昭',
+                        room: 'K410',
+                        class: 'has_course bg-purple-400 text-center'
+                    }
+                ],
+                [
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '9',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '16:40-17:30',
+                        class: ''
+                    }
+                ],
+                [
+                    {
+                        col: 1,
+                        row: 4,
+                        text: '晚上',
+                        class: 'has_course bg-gray-200 text-center font-semibold'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '10',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '17:40-18:30',
+                        class: ''
+                    }
+                ],
+                [
+
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '11',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '18:40-19:30',
+                        class: ''
+                    }
+                ],
+                [
+
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '12',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '19:40-20:30',
+                        class: ''
+                    }
+                ],
+                [
+
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '13',
+                        class: 'text-center'
+                    },
+                    {
+                        col: 1,
+                        row: 1,
+                        text: '20:40-21:30',
+                        class: ''
+                    }
+                ]
             ]
         }
     }
@@ -345,6 +464,7 @@ th, td {
 .has_course:hover{
     box-shadow: 0px 7px 25px -9px rgba(0,0,0,0.60);
 }
+
   #img {
     width: 100%;
     height: 200px;

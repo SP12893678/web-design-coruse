@@ -18,6 +18,7 @@ import 'prismjs/components/prism-clike'
 import 'prismjs/components/prism-javascript'
 import 'prismjs/components/prism-markup'
 import 'prismjs/components/prism-css'
+
 import 'prismjs/themes/prism-tomorrow.css' // import syntax highlighting styles
 
 export default {
@@ -33,7 +34,7 @@ export default {
     // data: () => ({ code: 'console.log("Hello World")' }),
     methods: {
         highlighter (code) {
-            return highlight(code, languages.css) // returns html
+            return highlight(code, languages.markup) // returns html
         }
     }
 }
