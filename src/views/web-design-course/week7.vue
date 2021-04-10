@@ -6,9 +6,9 @@
     :week="week"
   >
     <template slot="card-left">
-      <div>
-        圖片隨視窗大小更換
-      </div>
+      <h1 class="text-xl my-2 font-bold">
+        能夠把水球擠爆嗎?
+      </h1>
       <div
         id="img"
       />
@@ -40,6 +40,41 @@
           </td>
         </tr>
       </table>
+
+      <h1 class="text-xl my-2 font-bold">
+        2111
+      </h1>
+
+      <h2>An Unordered HTML List</h2>
+
+      <ul class="pl-10 list-disc">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+
+      <h2>An Ordered HTML List</h2>
+
+      <ol class="">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ol>
+
+      <dl>
+        <dt>IOT-物聯網</dt>
+        <dd>- 物聯網是一種計算裝置、機械、數位機器相互關聯的系統，具備通用唯一辨識碼，並具有通過網路傳輸數據的能力，無需人與人、或是人與裝置的互動。</dd>
+        <dt>AI-人工智慧</dt>
+        <dd>- 指由人製造出來的機器所表現出來的智慧。通常人工智慧是指透過普通電腦程式來呈現人類智慧的技術。該詞也指出研究這樣的智慧系統是否能夠實現，以及如何實現。</dd>
+        <dt>ML-機器學習</dt>
+        <dd>- 是一門人工智慧的科學，該領域的主要研究物件是人工智慧，特別是如何在經驗學習中改善具體演算法的效能。</dd>
+        <dt>DL-深度學習</dt>
+        <dd>- 是一種以人工神經網路為架構，對資料進行表徵學習的演算法。 深度學習是機器學習中一種基於對資料進行表徵學習的演算法。</dd>
+        <dt>Big Data-大數據</dt>
+        <dd>- 巨量資料，又稱為大數據，指的是在傳統數據處理應用軟體不足以處理的大或複雜的數據集的術語。</dd>
+        <dt>6V</dt>
+        <dd>- white cold drink</dd>
+      </dl>
     </template>
   </v-coruse-card>
 </template>
@@ -56,8 +91,8 @@ export default {
     },
     data () {
         return {
-            title: 'Introduction HTML',
-            date: 'February 25, 2021',
+            title: 'HTML Tables',
+            date: 'April 8, 2021',
             week: '7',
             code: mycode,
             corses_table: [
@@ -465,7 +500,7 @@ th, td {
     box-shadow: 0px 7px 25px -9px rgba(0,0,0,0.60);
 }
 
-  #img {
+#img {
     width: 100%;
     height: 200px;
     background: url("../../assets/images/ball-size-b.png") no-repeat center;
@@ -483,5 +518,33 @@ th, td {
     height: 200px;
     background-image: url("../../assets/images/ball-size-s.png");
   }
+}
+@media only screen and (max-width: 350px) {
+  #img {
+      width: 100%;
+    height: 200px;
+    background-image: url("../../assets/images/bubbleburst.gif");
+  }
+}
+
+ol li{
+    counter-increment: counter;
+    padding: 1rem 1rem 1rem 1rem;
+    background: white;
+    margin-top: 1rem;
+    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+}
+ol li::before{
+    content: counter(counter);
+    font: 900 1.5em/1 'Montserrat';
+    border: 8px;
+    padding: 0.125em 0.25em;
+}
+dt{
+    font-weight: 600;
+}
+dd{
+    font-size: 14px;
+    margin-inline-start: 2rem;
 }
 </style>
