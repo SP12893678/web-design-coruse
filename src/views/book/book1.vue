@@ -168,7 +168,14 @@
 <script>
 import vCoruseCard from '../CourseCard.vue'
 
-const mycode = `
+const mycode = `<!--Bookmark書籤-->
+<a href="#1">第一章-他叫白小純</a>
+<a href="#2">第二章-火灶房</a>
+<a href="#3">第三章-6句真言</a>
+
+<h3 id="1">第一章-他叫白小純</h3>
+<h3 id="2">第二章-火灶房</h3>
+<h3 id="3">第三章-6句真言</h3>
 `
 
 export default {

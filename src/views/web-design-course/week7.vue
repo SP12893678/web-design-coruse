@@ -41,24 +41,24 @@
         </tr>
       </table>
 
-      <h1 class="text-xl my-2 font-bold">
-        2111
+      <h1 class="mt-2 text-xl my-2 font-bold">
+        喜愛的食物
       </h1>
 
-      <h2>An Unordered HTML List</h2>
-
       <ul class="pl-10 list-disc">
-        <li>Coffee</li>
-        <li>Tea</li>
-        <li>Milk</li>
+        <li>巧克力</li>
+        <li>方塊酥</li>
+        <li>沙其馬</li>
       </ul>
 
-      <h2>An Ordered HTML List</h2>
+      <h1 class="mt-2 text-xl my-2 font-bold">
+        喜愛的食物排行
+      </h1>
 
       <ol class="">
-        <li>Coffee</li>
-        <li>Tea</li>
-        <li>Milk</li>
+        <li>巧克力</li>
+        <li>沙其馬</li>
+        <li>方塊酥</li>
       </ol>
 
       <dl>
@@ -82,7 +82,39 @@
 <script>
 import vCoruseCard from '../CourseCard.vue'
 
-const mycode = `
+const mycode = `圖片依視窗大小變更
+<picture>
+  <source media="(min-width: 650px)" srcset="圖片來源路徑">
+  <source media="(min-width: 465px)" srcset="圖片來源路徑">
+  <img src="img_girl.jpg">
+</picture>
+<!--表格-->
+<table>
+    <tr>
+        <td>Hello</td>
+        <td colspan="欄幾格">Hello</td>
+        <td rowspan="列幾格">Hello</td>
+    </tr>
+</table>
+<!--無序列表-->
+<ul>
+    <li>Item</li>
+    <li>Item</li>
+    <li>Item</li>
+</ul>
+<!--有序列表-->
+<ol>
+    <li>Item</li>
+    <li>Item</li>
+    <li>Item</li>
+</ol>
+<!--巢狀列表-->
+<dl>
+  <dt>Title</dt>
+  <dd>- Description</dd>
+  <dt>Title</dt>
+  <dd>- Description</dd>
+</dl>
 `
 
 export default {

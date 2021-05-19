@@ -24,7 +24,7 @@
                 仙侠
               </li>
               <li class=" px-1  bg-black text-white font-semibold">
-                修真文明
+                搞笑
               </li>
             </ul>
             <p class="tetai-2">
@@ -59,7 +59,7 @@
                 仙侠
               </li>
               <li class=" px-1  bg-black text-white font-semibold">
-                搞笑
+                修真文明
               </li>
             </ul>
             <p class="tetai-2">
@@ -124,6 +124,13 @@
 import vCoruseCard from '../CourseCard.vue'
 
 const mycode = `
+<a href="連結位置" target="開啟目標"> <!-- 連結元素 -->
+<!-- target
+_blank 新視窗
+_self 當前視窗
+_parent 父視窗
+_top 整個瀏覽器視窗
+-->
 `
 
 export default {

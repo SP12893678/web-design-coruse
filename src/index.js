@@ -31,5 +31,8 @@ const app = new Vue({
     store,
     router,
     el: '#app',
+    mounted () {
+        // router.push('/course/week8')
+    },
     render: h => h(App)
 })

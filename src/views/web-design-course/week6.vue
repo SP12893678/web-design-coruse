@@ -13,7 +13,7 @@
         <img
           src="../../assets/images/taiwan-map.jpg"
           alt="Workplace"
-          usemap="#workmap"
+          usemap="#taiwan"
         >
         <div class="right-side flex-grow py-8">
           <h1 class=" text-center font-semibold text-lg">
@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <map name="workmap">
+      <map name="taiwan">
         <area
           target=""
           alt=""
@@ -178,7 +178,22 @@
 <script>
 import vCoruseCard from '../CourseCard.vue'
 
-const mycode = `
+const mycode = `<!--影像地圖-->
+<img
+  src="../../assets/images/taiwan-map.jpg"
+  alt="Taiwan"
+  usemap="#taiwan"
+>
+<map name="taiwan">
+  <area
+    target=""
+    alt=""
+    title=""
+    href="#"
+    coords="360,34,355,41,353,47,356,54,363,54,364,46,372,42,365,38"
+    shape="poly"
+  >
+</map>
 `
 
 export default {

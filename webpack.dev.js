@@ -5,7 +5,7 @@ const { merge } = require('webpack-merge')
 module.exports = merge(common, {
     mode: 'development',
     devServer: {
-        port: 8080,
+        port: 8081,
         open: 'chrome'
     },
     output: {
