@@ -63,6 +63,18 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.(pdf|mp4|mp3)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'assets/other/[hash:7].[ext]',
+                            limit: 100000
+                        }
+                    }
+                ]
             }
         ]
     },
