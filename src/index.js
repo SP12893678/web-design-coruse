@@ -32,7 +32,7 @@ const app = new Vue({
     router,
     el: '#app',
     mounted () {
-        // router.push('/course/week8')
+        // router.push('/course/week14')
     },
     render: h => h(App)
 })

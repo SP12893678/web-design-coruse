@@ -23,6 +23,8 @@ import week9 from '../views/web-design-course/week9.vue'
 import week10 from '../views/web-design-course/week10.vue'
 import week11 from '../views/web-design-course/week11.vue'
 import week12 from '../views/web-design-course/week12.vue'
+import week13 from '../views/web-design-course/week13.vue'
+import week14 from '../views/web-design-course/week14.vue'
 
 Vue.use(Router)
 
@@ -48,7 +50,9 @@ const router = new Router({
                 { path: 'week9', component: week9 },
                 { path: 'week10', component: week10 },
                 { path: 'week11', component: week11 },
-                { path: 'week12', component: week12 }
+                { path: 'week12', component: week12 },
+                { path: 'week13', component: week13 },
+                { path: 'week14', component: week14 }
             ]
         },
         { path: '/404', name: 'error', component: Error },

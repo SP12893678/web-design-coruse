@@ -77,7 +77,7 @@ export default {
     },
     data () {
         return {
-            title: 'HTML HTML The id Attribute, Iframes, JavaScript',
+            title: 'HTML Iframe',
             date: 'April 29, 2021',
             week: '8',
             code: mycode,
